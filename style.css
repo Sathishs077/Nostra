@@ -1,0 +1,62 @@
+body{
+    padding: 0 10px;
+}
+
+#title {
+    font-family: "Alfa Slab One", serif;
+}
+
+#navbar
+{
+    padding: 10px;
+}
+
+#hero{
+    width: 100%;
+    overflow: hidden;
+}
+
+#slider{
+    animation: ImageMover 9s infinite;
+}
+
+@keyframes ImageMover {
+    0% {
+        transform: translateX(0);
+    }
+
+    30% {
+        transform: translateX(0);
+    }
+
+    35% {
+        transform: translateX(-33.33%);
+    }
+
+    65% {
+        transform: translateX(-33.33%);
+    }
+
+    70% {
+        transform: translateX(-66.66%);
+    }
+
+    100% {
+        transform: translateX(-66.66%);
+    }
+}
+
+#newArrivals{
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+
+#mostWanted {
+    scrollbar-width: none;
+}
+
+#newArrivals::-webkit-scrollbar {
+    display: none;
+}
+

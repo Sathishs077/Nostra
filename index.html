@@ -1,0 +1,586 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOSTRA</title>
+
+    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div>
+
+        <!-- Offer Bar -->
+        <div id="offerBar" class="relative w-full bg-red-600 p-3 flex justify-center items-center">
+            <h1 class="font-bold text-white text-center text-sm sm:text-base">
+                Signup and get flat 25% off
+            </h1>
+            <button id="closeOffer"
+                class="absolute right-3 sm:right-4 font-bold text-white cursor-pointer">
+                X
+            </button>
+        </div>
+
+        <!-- Main Navbar -->
+        <div id="navbar"
+            class="relative flex items-center justify-between bg-white shadow sticky top-0 w-full z-20 px-3 py-3 md:px-2">
+
+            <!-- Logo -->
+            <div class="shrink-0">
+                <h1 id="title"
+                    class="font-bold text-3xl md:text-4xl text-red-600"
+                    style="font-family: 'Alfa Slab One', serif;">
+                    NOSTRA
+                </h1>
+            </div>
+
+            <!-- Search Bar: Tablet and Laptop -->
+            <div
+                class="hidden md:flex items-center gap-3 border border-b-black-1 p-3 md:w-[30vw] lg:w-2xl rounded-3xl">
+                <svg class="cursor-pointer shrink-0" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                    width="24" height="24">
+                    <path d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg>
+                <input class="outline-none w-full min-w-0" type="search"
+                    placeholder="Search Anything you Want...">
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center gap-4 lg:gap-8 shrink-0">
+
+                <div>
+                    <a href="#" class="flex flex-col items-center hover:text-red-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m3 10 9-7 9 7" />
+                            <path d="M5 9v12h14V9" />
+                            <path d="M9 21v-7h6v7" />
+                        </svg>
+                        <p>Home</p>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="collections.html"
+                        class="flex flex-col items-center cursor-pointer hover:text-red-600">
+                        <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                            <path
+                                d="M2.25 2.25a.75.75 0 0 0 0 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 0 0-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 0 0 0-1.5H5.378A2.25 2.25 0 0 1 7.5 15h11.218a.75.75 0 0 0 .674-.421 60.358 60.358 0 0 0 2.96-7.228.75.75 0 0 0-.525-.965A60.864 60.864 0 0 0 5.68 4.509l-.232-.867A1.875 1.875 0 0 0 3.636 2.25H2.25ZM3.75 20.25a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM16.5 20.25a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z" />
+                        </svg>
+                        <p>Collection</p>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="contact-us.html"
+                        class="flex flex-col items-center cursor-pointer hover:text-red-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.35 1.9.69 2.8a2 2 0 0 1-.45 2.11L8.08 9.92a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.84.57 2.8.69A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                        <p>Contact</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button id="menuBtn"
+                class="md:hidden flex flex-col justify-center items-center gap-1.5 p-2 cursor-pointer"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+                <span class="block w-7 h-0.5 bg-black rounded"></span>
+                <span class="block w-7 h-0.5 bg-black rounded"></span>
+                <span class="block w-7 h-0.5 bg-black rounded"></span>
+            </button>
+
+            <!-- Mobile Dropdown Menu -->
+            <div id="mobileMenu"
+                class="hidden md:hidden absolute right-3 top-full mt-2 w-48 bg-white shadow-xl rounded-xl p-4 z-50">
+
+                <a href="#"
+                    class="block py-3 px-2 border-b border-gray-100 hover:text-red-600">
+                    Home
+                </a>
+
+                <a href="collections.html"
+                    class="block py-3 px-2 border-b border-gray-100 hover:text-red-600">
+                    Collection
+                </a>
+
+                <a href="contact-us.html"
+                    class="block py-3 px-2 hover:text-red-600">
+                    Contact Us
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Products Categories -->
+        <div
+            class="mt-2 grid grid-cols-4 sm:grid-cols-4 md:flex md:justify-between md:items-center gap-y-5 gap-x-2 p-3 sm:p-5 shadow-sm">
+
+            <div class="flex flex-col items-center text-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                </svg>
+                <p class="text-xs sm:text-sm">For You</p>
+            </div>
+
+            <div class="flex flex-col items-center text-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                </svg>
+                <p class="text-xs sm:text-sm">Mobiles</p>
+            </div>
+
+            <div class="flex flex-col items-center text-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28"
+                    height="28" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M16 3.5 20.5 6l-2 4-2.5-1.5V21h-12V8.5L1.5 10.5l-2-4L4 3.5c1.2 1.4 2.5 2 4 2h4c1.5 0 2.8-.6 4-2Z"
+                        transform="translate(2 0)" />
+                    <path d="M9 4c.2 1.5 1.2 2.5 3 2.5S14.8 5.5 15 4" />
+                </svg>
+                <p class="text-xs sm:text-sm">Fashion</p>
+            </div>
+
+            <div class="flex flex-col items-center text-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M6 20.25h12m-7.5-3v3m3-3v3m-10.125-3h17.25c.621 0 1.125-.504 1.125-1.125V4.875c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125Z" />
+                </svg>
+                <p class="text-xs sm:text-sm">Appliances</p>
+            </div>
+
+            <div class="flex flex-col items-center text-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28"
+                    height="28" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M7 10h10a4 4 0 0 1 3.8 5.2l-.5 1.6a2.5 2.5 0 0 1-4.2 1L14.5 17h-5l-1.6 1.8a2.5 2.5 0 0 1-4.2-1l-.5-1.6A4 4 0 0 1 7 10Z" />
+                    <path d="M7 13v4M5 15h4" />
+                    <circle cx="16.5" cy="13.5" r=".5" />
+                    <circle cx="18.5" cy="15.5" r=".5" />
+                </svg>
+                <p class="text-xs sm:text-sm">Toys</p>
+            </div>
+
+            <div class="flex flex-col items-center text-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30"
+                    height="30" viewBox="0 0 64 64" fill="none"
+                    stroke="black" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <g transform="rotate(-35 32 32)">
+                        <path d="M27 8 Q27 5 32 5 Q37 5 37 8 L37 39 Q37 43 32 43 Q27 43 27 39 Z" />
+                        <path d="M29 43 L29 58 Q32 61 35 58 L35 43" />
+                        <path d="M29 13 L35 13 M29 18 L35 18 M29 23 L35 23" />
+                    </g>
+                    <circle cx="47" cy="43" r="10" />
+                    <path d="M42 34 Q52 43 42 52" />
+                    <path d="M43 37 L45 39 M44 41 L46 43 M44 46 L46 48 M42 49 L44 51" />
+                </svg>
+                <p class="text-xs sm:text-sm">Sports</p>
+            </div>
+
+            <div class="flex flex-col items-center text-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+                </svg>
+                <p class="text-xs sm:text-sm">Books</p>
+            </div>
+
+        </div>
+
+        <!-- Hero Section -->
+        <div id="hero" class="w-full overflow-hidden">
+            <div id="slider"
+                class="flex gap-3 mt-5 w-max animate-slide">
+
+                <img class="w-[85vw] sm:w-[420px] md:w-[500px] h-40 sm:h-52 md:h-60 object-cover rounded-2xl shrink-0"
+                    src="./img/img1.jpg" alt="Image">
+                <img class="w-[85vw] sm:w-[420px] md:w-[500px] h-40 sm:h-52 md:h-60 object-cover rounded-2xl shrink-0"
+                    src="./img/img2.jpg" alt="Image">
+                <img class="w-[85vw] sm:w-[420px] md:w-[500px] h-40 sm:h-52 md:h-60 object-cover rounded-2xl shrink-0"
+                    src="./img/img3.jpg" alt="Image">
+                <img class="w-[85vw] sm:w-[420px] md:w-[500px] h-40 sm:h-52 md:h-60 object-cover rounded-2xl shrink-0"
+                    src="./img/img4.jpg" alt="Image">
+                <img class="w-[85vw] sm:w-[420px] md:w-[500px] h-40 sm:h-52 md:h-60 object-cover rounded-2xl shrink-0"
+                    src="./img/img5.jpg" alt="Image">
+                <img class="w-[85vw] sm:w-[420px] md:w-[500px] h-40 sm:h-52 md:h-60 object-cover rounded-2xl shrink-0"
+                    src="./img/img6.jpg" alt="Image">
+                <img class="w-[85vw] sm:w-[420px] md:w-[500px] h-40 sm:h-52 md:h-60 object-cover rounded-2xl shrink-0"
+                    src="./img/img7.jpg" alt="Image">
+
+                <!-- Duplicate for Seamless Loop -->
+                <img class="w-[85vw] sm:w-[420px] md:w-[500px] h-40 sm:h-52 md:h-60 object-cover rounded-2xl shrink-0"
+                    src="./img/img1.jpg" alt="Image">
+                <img class="w-[85vw] sm:w-[420px] md:w-[500px] h-40 sm:h-52 md:h-60 object-cover rounded-2xl shrink-0"
+                    src="./img/img2.jpg" alt="Image">
+                <img class="w-[85vw] sm:w-[420px] md:w-[500px] h-40 sm:h-52 md:h-60 object-cover rounded-2xl shrink-0"
+                    src="./img/img3.jpg" alt="Image">
+                <img class="w-[85vw] sm:w-[420px] md:w-[500px] h-40 sm:h-52 md:h-60 object-cover rounded-2xl shrink-0"
+                    src="./img/img4.jpg" alt="Image">
+                <img class="w-[85vw] sm:w-[420px] md:w-[500px] h-40 sm:h-52 md:h-60 object-cover rounded-2xl shrink-0"
+                    src="./img/img5.jpg" alt="Image">
+                <img class="w-[85vw] sm:w-[420px] md:w-[500px] h-40 sm:h-52 md:h-60 object-cover rounded-2xl shrink-0"
+                    src="./img/img6.jpg" alt="Image">
+                <img class="w-[85vw] sm:w-[420px] md:w-[500px] h-40 sm:h-52 md:h-60 object-cover rounded-2xl shrink-0"
+                    src="./img/img7.jpg" alt="Image">
+
+            </div>
+        </div>
+
+        <!-- New Arrivals -->
+        <div class="mt-5">
+            <h1 class="font-bold text-2xl sm:text-3xl md:text-4xl">
+                New Arrivals
+            </h1>
+
+            <div id="newArrivals"
+                class="flex flex-nowrap h-44 sm:h-48 md:h-50 gap-4 sm:gap-6 md:gap-10 border border-gray-200 mt-2 p-3 rounded-2xl overflow-x-auto">
+
+                <div class="relative w-[140px] sm:w-[155px] md:w-[174px] shrink-0">
+                    <img class="w-full h-full object-cover rounded-xl" src="./img/img8.jpg" alt="Summer Shirts">
+                    <span class="absolute top-2 left-2 bg-yellow-400 px-2 py-1 rounded-2xl text-xs">NEW</span>
+                </div>
+
+                <div class="relative w-[140px] sm:w-[155px] md:w-[174px] shrink-0">
+                    <img class="w-full h-full object-cover rounded-xl" src="./img/img9.jpg" alt="Summer Shirts">
+                    <span class="absolute top-2 left-2 bg-yellow-400 px-2 py-1 rounded-2xl text-xs">NEW</span>
+                </div>
+
+                <div class="relative w-[140px] sm:w-[155px] md:w-[174px] shrink-0">
+                    <img class="w-full h-full object-cover rounded-xl" src="./img/img10.jpg" alt="Summer Shirts">
+                    <span class="absolute top-2 left-2 bg-yellow-400 px-2 py-1 rounded-2xl text-xs">NEW</span>
+                </div>
+
+                <div class="relative w-[140px] sm:w-[155px] md:w-[174px] shrink-0">
+                    <img class="w-full h-full object-cover rounded-xl" src="./img/img11.jpg" alt="Summer Shirts">
+                    <span class="absolute top-2 left-2 bg-yellow-400 px-2 py-1 rounded-2xl text-xs">NEW</span>
+                </div>
+
+                <div class="relative w-[140px] sm:w-[155px] md:w-[174px] shrink-0">
+                    <img class="w-full h-full object-cover rounded-xl" src="./img/img12.jpg" alt="Summer Shirts">
+                    <span class="absolute top-2 left-2 bg-yellow-400 px-2 py-1 rounded-2xl text-xs">NEW</span>
+                </div>
+
+                <div class="relative w-[140px] sm:w-[155px] md:w-[174px] shrink-0">
+                    <img class="w-full h-full object-cover rounded-xl" src="./img/img13.jpg" alt="Summer Shirts">
+                    <span class="absolute top-2 left-2 bg-yellow-400 px-2 py-1 rounded-2xl text-xs">NEW</span>
+                </div>
+
+                <div class="relative w-[140px] sm:w-[155px] md:w-[174px] shrink-0">
+                    <img class="w-full h-full object-cover rounded-xl" src="./img/img14.jpg" alt="Summer Shirts">
+                    <span class="absolute top-2 left-2 bg-yellow-400 px-2 py-1 rounded-2xl text-xs">NEW</span>
+                </div>
+
+                <div class="relative w-[140px] sm:w-[155px] md:w-[174px] shrink-0">
+                    <img class="w-full h-full object-cover rounded-xl" src="./img/img15.jpg" alt="Summer Shirts">
+                    <span class="absolute top-2 left-2 bg-yellow-400 px-2 py-1 rounded-xl text-xs">NEW</span>
+                </div>
+
+                <div class="relative w-[140px] sm:w-[155px] md:w-[174px] shrink-0">
+                    <img class="w-full h-full object-cover rounded-xl" src="./img/img16.jpg" alt="Summer Shirts">
+                    <span class="absolute top-2 left-2 bg-yellow-400 px-2 py-1 rounded-2xl text-xs">NEW</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Most Wanted -->
+        <div id="mostWanted" class="mt-5">
+            <p class="font-bold text-2xl sm:text-3xl md:text-4xl">
+                Most Wanted
+            </p>
+
+            <div
+                class="flex justify-start lg:justify-between items-center gap-4 sm:gap-6 lg:gap-10 border border-gray-200 mt-2 p-3 rounded-2xl overflow-x-auto">
+
+                <div class="relative w-[140px] sm:w-[150px] shrink-0 flex flex-col items-center text-center border border-green-300 rounded-2xl p-2">
+                    <img class="object-contain h-[100px] w-full" src="./img/iphone17.jpg" alt="iPhone 17">
+                    <h2 class="font-bold">Iphone 17</h2>
+                    <del>₹89,999</del><span>₹79,999</span>
+                    <svg class="likeBtn absolute top-2 right-2 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z" />
+                    </svg>
+                </div>
+
+                <div class="relative w-[140px] sm:w-[150px] shrink-0 flex flex-col items-center text-center border border-green-300 rounded-2xl p-2">
+                    <img class="object-contain rounded-2xl h-[100px] w-full" src="./img/samsung-z.jpg" alt="Samsung Z">
+                    <h2 class="font-bold">Samsung Z</h2>
+                    <del>₹69,999</del><span>₹53,999</span>
+                    <svg class="likeBtn absolute top-2 right-2 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z" />
+                    </svg>
+                </div>
+
+                <div class="relative w-[140px] sm:w-[150px] shrink-0 flex flex-col items-center text-center border border-green-300 rounded-2xl p-2">
+                    <img class="object-contain rounded-2xl h-[100px] w-full" src="./img/galaxy-buds-on.jpg" alt="Galaxy Buds">
+                    <h2 class="font-bold">Galazy Buds9</h2>
+                    <del>₹19,999</del><span>₹13,999</span>
+                    <svg class="likeBtn absolute top-2 right-2 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z" />
+                    </svg>
+                </div>
+
+                <div class="relative w-[140px] sm:w-[150px] shrink-0 flex flex-col items-center text-center border border-green-300 rounded-2xl p-2">
+                    <img class="object-contain rounded-2xl h-[100px] w-full" src="./img/galaxy-watch.jpg" alt="Galaxy Watch">
+                    <h2 class="font-bold">Galaxy Watch</h2>
+                    <del>₹25,999</del><span>₹18,999</span>
+                    <svg class="likeBtn absolute top-2 right-2 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z" />
+                    </svg>
+                </div>
+
+                <div class="relative w-[140px] sm:w-[150px] shrink-0 flex flex-col items-center text-center border border-green-300 rounded-2xl p-2">
+                    <img class="object-contain h-[100px] w-full" src="./img/oneplus.jpg" alt="Oneplus 13r">
+                    <h2 class="font-bold">Oneplus 13r</h2>
+                    <del>₹35,999</del><span>₹27,999</span>
+                    <svg class="likeBtn absolute top-2 right-2 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z" />
+                    </svg>
+                </div>
+
+                <div class="relative w-[140px] sm:w-[150px] shrink-0 flex flex-col items-center text-center border border-green-300 rounded-2xl p-2">
+                    <img class="object-contain h-[100px] w-full" src="./img/apple-watch.jpg" alt="iWatch Ultra 3">
+                    <h2 class="font-bold">iWatch Ultra9</h2>
+                    <del>₹34,999</del><span>₹28,999</span>
+                    <svg class="likeBtn absolute top-2 right-2 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z" />
+                    </svg>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Why Choose NOSTRA -->
+        <section class="mt-8 sm:mt-10 md:mt-12 px-4 sm:px-5 py-6 sm:py-8 md:py-10 bg-gray-100 rounded-2xl">
+
+            <div class="flex flex-col md:flex-row justify-between gap-4 mb-8">
+                <div>
+                    <p class="text-red-600 font-bold tracking-widest">
+                        WHY CHOOSE US
+                    </p>
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold mt-2">
+                        Why Shop With NOSTRA?
+                    </h1>
+                </div>
+
+                <p class="text-gray-600 max-w-md text-sm sm:text-base">
+                    We bring you quality products, amazing deals and
+                    a shopping experience that makes every purchase special.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+
+                <!-- Card 1 -->
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border-b-4 border-red-600 hover:-translate-y-2 transition duration-300 shadow-sm">
+                    <div class="bg-red-100 w-14 h-14 flex items-center justify-center rounded-xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m9 12 2 2 4-4" />
+                            <path d="M12 3 4 6v5c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6z" />
+                        </svg>
+                    </div>
+                    <h2 class="font-bold text-lg mt-5">Genuine Products</h2>
+                    <p class="text-gray-500 text-sm mt-2">
+                        Get original and high-quality products from trusted brands.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border-b-4 border-red-600 hover:-translate-y-2 transition duration-300 shadow-sm">
+                    <div class="bg-red-100 w-14 h-14 flex items-center justify-center rounded-xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 7h18" />
+                            <path d="M5 7V5h14v2" />
+                            <path d="M5 7v12h14V7" />
+                            <path d="m9 13 2 2 4-4" />
+                        </svg>
+                    </div>
+                    <h2 class="font-bold text-lg mt-5">Easy Shopping</h2>
+                    <p class="text-gray-500 text-sm mt-2">
+                        Discover your favourite products with a simple shopping experience.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border-b-4 border-red-600 hover:-translate-y-2 transition duration-300 shadow-sm">
+                    <div class="bg-red-100 w-14 h-14 flex items-center justify-center rounded-xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 7h11v10H3z" />
+                            <path d="M14 10h4l3 3v4h-7z" />
+                            <circle cx="7.5" cy="19" r="2" />
+                            <circle cx="17.5" cy="19" r="2" />
+                        </svg>
+                    </div>
+                    <h2 class="font-bold text-lg mt-5">Fast Delivery</h2>
+                    <p class="text-gray-500 text-sm mt-2">
+                        Get your favourite products delivered straight to your doorstep.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border-b-4 border-red-600 hover:-translate-y-2 transition duration-300 shadow-sm">
+                    <div class="bg-red-100 w-14 h-14 flex items-center justify-center rounded-xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m12 2 2.5 6H21l-5 4 2 7-6-4-6 4 2-7-5-4h6.5z" />
+                        </svg>
+                    </div>
+                    <h2 class="font-bold text-lg mt-5">Best Deals</h2>
+                    <p class="text-gray-500 text-sm mt-2">
+                        Enjoy amazing offers and great value on your favourite products.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-black text-white mt-10 px-4 sm:px-6 py-8 sm:py-10">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
+
+                <!-- Brand -->
+                <div>
+                    <h1 class="text-4xl font-bold text-red-500"
+                        style="font-family: 'Alfa Slab One', serif;">
+                        NOSTRA
+                    </h1>
+
+                    <p class="text-gray-400 mt-4 leading-7">
+                        Discover the latest trends in fashion, electronics
+                        and lifestyle. Shop your favorite products at
+                        the best prices.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4 mt-5">
+                        <a href="#" class="hover:text-red-500">Instagram</a>
+                        <a href="#" class="hover:text-red-500">Facebook</a>
+                        <a href="#" class="hover:text-red-500">YouTube</a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h2 class="font-bold text-xl mb-5">Quick Links</h2>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Home</a></li>
+                        <li><a href="#" class="hover:text-white">New Arrivals</a></li>
+                        <li><a href="#" class="hover:text-white">Most Wanted</a></li>
+                        <li><a href="#" class="hover:text-white">About Us</a></li>
+                        <li><a href="#" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Categories -->
+                <div>
+                    <h2 class="font-bold text-xl mb-5">Categories</h2>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Mobiles</a></li>
+                        <li><a href="#" class="hover:text-white">Fashion</a></li>
+                        <li><a href="#" class="hover:text-white">Electronics</a></li>
+                        <li><a href="#" class="hover:text-white">Toys</a></li>
+                        <li><a href="#" class="hover:text-white">Sports</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+
+                <p class="text-gray-400 text-sm text-center">
+                    © 2026 NOSTRA. All Rights Reserved.
+                </p>
+
+                <div class="flex flex-wrap justify-center gap-4 sm:gap-5 text-sm text-gray-400">
+                    <a href="#" class="hover:text-white">Privacy Policy</a>
+                    <a href="#" class="hover:text-white">Terms & Conditions</a>
+                </div>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+    <script>
+
+        // Offer Close
+        const offerBar = document.getElementById("offerBar");
+        const closeOffer = document.getElementById("closeOffer");
+
+        closeOffer.addEventListener("click", function () {
+            offerBar.style.display = "none";
+        });
+
+
+        // Mobile Navbar Toggle
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        menuBtn.addEventListener("click", function () {
+            mobileMenu.classList.toggle("hidden");
+
+            const isOpen = !mobileMenu.classList.contains("hidden");
+            menuBtn.setAttribute("aria-expanded", isOpen);
+        });
+
+        // Close menu after clicking a link
+        mobileMenu.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                mobileMenu.classList.add("hidden");
+                menuBtn.setAttribute("aria-expanded", "false");
+            });
+        });
+
+
+        // Like Button
+        const likeBtns = document.querySelectorAll(".likeBtn");
+
+        likeBtns.forEach(function (like) {
+            like.addEventListener("click", function () {
+                if (like.style.fill === "red") {
+                    like.style.fill = "none";
+                    like.style.color = "black";
+                }
+                else {
+                    like.style.fill = "red";
+                    like.style.color = "red";
+                }
+            });
+        });
+
+    </script>
+
+</body>
+</html>

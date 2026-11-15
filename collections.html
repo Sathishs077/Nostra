@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOSTRA - Collections</title>
+
+    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="collections.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-white">
+
+    <!-- Offer Bar -->
+    <div class="relative w-full bg-red-600 p-3 flex justify-center items-center">
+        <h1 class="font-bold text-white text-center">
+            Signup and get flat 25% off
+        </h1>
+
+        <button class="absolute right-4 font-bold text-white cursor-pointer" onclick="this.parentElement.remove()">
+            X
+        </button>
+    </div>
+
+
+    <!-- Navbar -->
+    <div id="navbar"
+        class="flex flex-wrap items-center justify-between bg-white shadow p-5 sticky top-0 w-full z-1 gap-4">
+
+        <h1 class="font-bold text-4xl text-red-600" style="font-family: 'Alfa Slab One', serif;">
+            NOSTRA
+        </h1>
+
+        <div class="flex flex-wrap gap-5 md:gap-8 text-sm md:text-lg">
+            <a href="index.html" class="hover:text-red-600">Home</a>
+            <a href="#" class="hover:text-red-600">New Arrival</a>
+            <a href="#" class="hover:text-red-600">Most Wanted</a>
+            <a href="collections.html" class="text-red-600 font-bold">Collections</a>
+            <a href="contact-us.html" class="hover:text-red-600">Contact Us</a>
+        </div>
+
+    </div>
+
+
+    <!-- Collection Heading -->
+    <section class="px-5 pt-8 pb-3">
+
+        <h1 class="text-3xl md:text-4xl font-bold">
+            Our Collections
+        </h1>
+
+        <p class="text-gray-500 mt-2">
+            Discover your favourite products at NOSTRA.
+        </p>
+
+    </section>
+
+
+    <!-- Collections -->
+    <section class="p-5">
+        <div class="flex gap-5 items-start">
+
+
+            <!-- Sidebar -->
+            <aside id="filterSidebar"
+                class="hidden md:block w-40 sm:w-56 lg:w-64 shrink-0 border-r-2 border-black pr-3 sm:pr-5">
+
+                <!-- Categories -->
+                <div class="mb-10">
+
+                    <h1 class="text-2xl md:text-3xl font-bold mb-5">
+                        Categories
+                    </h1>
+
+                    <div class="flex flex-col gap-3 text-lg md:text-xl">
+
+                        <label class="flex items-center gap-2">
+                            <input type="checkbox" value="Shirts" class="filter-check accent-red-600">
+                            Shirts
+                        </label>
+
+                        <label class="flex items-center gap-2">
+                            <input type="checkbox" value="Pants" class="filter-check accent-red-600">
+                            Pants
+                        </label>
+
+                        <label class="flex items-center gap-2">
+                            <input type="checkbox" value="Shoes" class="filter-check accent-red-600">
+                            Shoes
+                        </label>
+
+                        <label class="flex items-center gap-2">
+                            <input type="checkbox" value="T-Shirts" class="filter-check accent-red-600">
+                            T-Shirts
+                        </label>
+
+                        <label class="flex items-center gap-2">
+                            <input type="checkbox" value="Phones" class="filter-check accent-red-600">
+                            Mobiles
+                        </label>
+
+                        <label class="flex items-center gap-2">
+                            <input type="checkbox" value="Headphones" class="filter-check accent-red-600">
+                            Headphones
+                        </label>
+
+                        <label class="flex items-center gap-2">
+                            <input type="checkbox" value="Watches" class="filter-check accent-red-600">
+                            Watches
+                        </label>
+
+                        <label class="flex items-center gap-2">
+                            <input type="checkbox" value="Earbuds" class="filter-check accent-red-600">
+                            Earbuds
+                        </label>
+
+                    </div>
+                </div>
+
+                <!-- Brands -->
+                <div class="mb-10">
+
+                    <h1 class="text-2xl md:text-3xl font-bold mb-5">
+                        Brands
+                    </h1>
+
+                    <div class="flex flex-col gap-3 text-lg md:text-xl">
+
+                        <label class="flex items-center gap-2">
+                            <input type="checkbox" value="Apple" class="filter-check accent-red-600">
+                            Apple
+                        </label>
+
+                        <label class="flex items-center gap-2">
+                            <input type="checkbox" value="Samsung" class="filter-check accent-red-600">
+                            Samsung
+                        </label>
+
+                        <label class="flex items-center gap-2">
+                            <input type="checkbox" value="OnePlus" class="filter-check accent-red-600">
+                            OnePlus
+                        </label>
+
+                        <label class="flex items-center gap-2">
+                            <input type="checkbox" value="Sony" class="filter-check accent-red-600">
+                            Sony
+                        </label>
+
+                        <label class="flex items-center gap-2">
+                            <input type="checkbox" value="Boat" class="filter-check accent-red-600">
+                            boAt
+                        </label>
+
+                    </div>
+                </div>
+
+            </aside>
+
+
+
+            <!-- Product Section -->
+            <div class="flex-1 min-w-0">
+
+                <!-- Search Bar -->
+                <!-- Search Bar -->
+                <div class="flex items-center gap-3 mb-7">
+
+                    <!-- Mobile Filter Button -->
+                    <button id="filterBtn"
+                        class="md:hidden bg-black text-white px-4 py-3 rounded-lg shrink-0 hover:bg-red-600 duration-300">
+                        Filters
+                    </button>
+
+                    <!-- Search -->
+                    <div class="flex items-center border border-gray-800 rounded-xl px-3 py-2 w-full">
+
+                        <input id="searchInput" type="search" placeholder="Search Anything you Want..."
+                            class="w-full outline-none">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            stroke-width="2" width="24" height="24">
+
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="m21 21-4.3-4.3" />
+
+                        </svg>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Product Count -->
+                <p id="productCount" class="text-gray-500 mb-5"></p>
+
+
+                <!-- Product Grid -->
+                <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+
+                    <!-- SHIRTS -->
+
+                    <div class="product-card" data-category="Shirts" data-brand="" data-price="220">
+                        <div class="relative overflow-hidden bg-gray-100">
+                            <img src="./img/img9.jpg" alt="Floral Summer Shirt"
+                                class="w-full aspect-square object-contain hover:scale-105 duration-300">
+                        </div>
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">Floral Summer Shirt</h2>
+                        <p class="mt-1">₹220</p>
+                    </div>
+
+                    <div class="product-card" data-category="Shirts" data-brand="" data-price="260">
+                        <div class="relative overflow-hidden bg-gray-100">
+                            <img src="./img/img14.jpg" alt="Summer Green Shirt"
+                                class="w-full aspect-square object-contain hover:scale-105 duration-300">
+                        </div>
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">Summer Green Shirt</h2>
+                        <p class="mt-1">₹260</p>
+                    </div>
+
+                    <div class="product-card" data-category="Shirts" data-brand="" data-price="399">
+                        <div class="relative overflow-hidden bg-gray-100">
+                            <img src="./img/img15.jpg" alt="Party Floral Shirt"
+                                class="w-full aspect-square object-contain hover:scale-105 duration-300">
+                        </div>
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">Party Floral Shirt</h2>
+                        <p class="mt-1">₹399</p>
+                    </div>
+
+                    <div class="product-card" data-category="Shirts" data-brand="" data-price="350">
+                        <img src="./img/plain-shirt2.jpg" alt="Blue Plain Shirt"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">Blue Plain Shirt</h2>
+                        <p class="mt-1">₹350</p>
+                    </div>
+
+                    <div class="product-card" data-category="Shirts" data-brand="" data-price="399">
+                        <img src="./img/plain-shirt3.jpg" alt="Red Plain Shirt"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">Red Plain Shirt</h2>
+                        <p class="mt-1">₹399</p>
+                    </div>
+
+                    <div class="product-card" data-category="Shirts" data-brand="" data-price="450">
+                        <img src="./img/plain-shirt4.jpg" alt="Pink Plain Shirt"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">Pink Plain Shirt</h2>
+                        <p class="mt-1">₹450</p>
+                    </div>
+
+                    <div class="product-card" data-category="Shirts" data-brand="" data-price="450">
+                        <img src="./img/plain-shirt5.jpg" alt="Blue Printed Shirt"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">Blue Printed Shirt</h2>
+                        <p class="mt-1">₹450</p>
+                    </div>
+
+
+                    <!-- PANTS -->
+
+                    <div class="product-card" data-category="Pants" data-brand="" data-price="550">
+                        <img src="./img/pant1.jpg" alt="Beige Formal Pants"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">Beige Formal Pants</h2>
+                        <p class="mt-1">₹550</p>
+                    </div>
+
+                    <div class="product-card" data-category="Pants" data-brand="" data-price="650">
+                        <img src="./img/pant2.jpg" alt="Olive Casual Pants"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">Olive Casual Pants</h2>
+                        <p class="mt-1">₹650</p>
+                    </div>
+
+                    <div class="product-card" data-category="Pants" data-brand="" data-price="700">
+                        <img src="./img/pant3.jpg" alt="Black Casual Pants"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">Black Casual Pants</h2>
+                        <p class="mt-1">₹700</p>
+                    </div>
+
+                    <div class="product-card" data-category="Pants" data-brand="" data-price="800">
+                        <img src="./img/pant4.jpg" alt="Blue Denim Jeans"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">Blue Denim Jeans</h2>
+                        <p class="mt-1">₹800</p>
+                    </div>
+
+                    <div class="product-card" data-category="Pants" data-brand="" data-price="600">
+                        <img src="./img/pant5.jpg" alt="Cream Pants"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">Cream Pants</h2>
+                        <p class="mt-1">₹600</p>
+                    </div>
+
+                    <div class="product-card" data-category="Pants" data-brand="" data-price="750">
+                        <img src="./img/pant6.jpg" alt="Grey Jogger Pants"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">Grey Jogger Pants</h2>
+                        <p class="mt-1">₹750</p>
+                    </div>
+
+
+                    <!-- SHOES -->
+
+                    <div class="product-card" data-category="Shoes" data-brand="" data-price="1200">
+                        <img src="./img/nike.jpg" alt="Nike Sneakers"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">Nike Sneakers</h2>
+                        <p class="mt-1">₹1200</p>
+                    </div>
+
+                    <div class="product-card" data-category="Shoes" data-brand="" data-price="1500">
+                        <img src="./img/formal-shoe.jpg" alt="Formal Shoes"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">Formal Shoes</h2>
+                        <p class="mt-1">₹1500</p>
+                    </div>
+
+                    <div class="product-card" data-category="Shoes" data-brand="" data-price="1300">
+                        <img src="./img/hightop-shoe.jpg" alt="High Top Shoes"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">High Top Shoes</h2>
+                        <p class="mt-1">₹1300</p>
+                    </div>
+
+                    <div class="product-card" data-category="Shoes" data-brand="" data-price="1100">
+                        <img src="./img/loafers-shoe.jpg" alt="Loafers"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">Loafers</h2>
+                        <p class="mt-1">₹1100</p>
+                    </div>
+
+                    <div class="product-card" data-category="Shoes" data-brand="" data-price="1400">
+                        <img src="./img/retro-shoe.jpg" alt="Retro Sneakers"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">Retro Sneakers</h2>
+                        <p class="mt-1">₹1400</p>
+                    </div>
+
+                    <div class="product-card" data-category="Shoes" data-brand="" data-price="900">
+                        <img src="./img/running-shoe.jpg" alt="Running Shoes"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">Running Shoes</h2>
+                        <p class="mt-1">₹900</p>
+                    </div>
+
+
+                    <!-- T-SHIRTS -->
+
+                    <div class="product-card" data-category="T-Shirts" data-brand="" data-price="299">
+                        <img src="./img/tshirt1.jpg" alt="White Oversized T-Shirt"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">White Oversized T-Shirt</h2>
+                        <p class="mt-1">₹299</p>
+                    </div>
+
+                    <div class="product-card" data-category="T-Shirts" data-brand="" data-price="350">
+                        <img src="./img/tshirt2.jpg" alt="Black Graphic T-Shirt"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">Black Graphic T-Shirt</h2>
+                        <p class="mt-1">₹350</p>
+                    </div>
+
+                    <div class="product-card" data-category="T-Shirts" data-brand="" data-price="320">
+                        <img src="./img/tshirt3.jpg" alt="Beige T-Shirt"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">Beige T-Shirt</h2>
+                        <p class="mt-1">₹320</p>
+                    </div>
+
+                    <div class="product-card" data-category="T-Shirts" data-brand="" data-price="399">
+                        <img src="./img/tshirt4.jpg" alt="Green T-Shirt"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">Green T-Shirt</h2>
+                        <p class="mt-1">₹399</p>
+                    </div>
+
+                    <div class="product-card" data-category="T-Shirts" data-brand="" data-price="399">
+                        <img src="./img/tshirt5.jpg" alt="Navy T-Shirt"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">Navy T-Shirt</h2>
+                        <p class="mt-1">₹399</p>
+                    </div>
+
+                    <div class="product-card" data-category="T-Shirts" data-brand="" data-price="299">
+                        <img src="./img/tshirt6.jpg" alt="Grey T-Shirt"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">Grey T-Shirt</h2>
+                        <p class="mt-1">₹299</p>
+                    </div>
+
+
+                    <!-- IPHONES -->
+
+                    <div class="product-card" data-category="Phones" data-brand="Apple" data-price="65000">
+                        <img src="./img/iphone15.jpg" alt="iPhone 15"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">iPhone 15</h2>
+                        <p class="mt-1">₹65,000</p>
+                    </div>
+
+                    <div class="product-card" data-category="Phones" data-brand="Apple" data-price="75000">
+                        <img src="./img/iphone16.jpg" alt="iPhone 16"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">iPhone 16</h2>
+                        <p class="mt-1">₹75,000</p>
+                    </div>
+
+                    <div class="product-card" data-category="Phones" data-brand="Apple" data-price="90000">
+                        <img src="./img/iphonepro14.jpg" alt="iPhone Pro"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">iPhone Pro</h2>
+                        <p class="mt-1">₹90,000</p>
+                    </div>
+
+
+                    <!-- SAMSUNG -->
+
+                    <div class="product-card" data-category="Phones" data-brand="Samsung" data-price="95000">
+                        <img src="./img/samsung-s26+.jpg" alt="Samsung S26 Plus"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">Samsung S26+</h2>
+                        <p class="mt-1">₹95,000</p>
+                    </div>
+
+                    <div class="product-card" data-category="Phones" data-brand="Samsung" data-price="110000">
+                        <img src="./img/samsung-zpro.jpg" alt="Samsung Z Pro"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">Samsung Z Pro</h2>
+                        <p class="mt-1">₹1,10,000</p>
+                    </div>
+
+                    <div class="product-card" data-category="Phones" data-brand="Samsung" data-price="85000">
+                        <img src="./img/samsung-s25ultr.jpg" alt="Samsung S25 Ultra"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">Samsung S25 Ultra</h2>
+                        <p class="mt-1">₹85,000</p>
+                    </div>
+
+                    <div class="product-card" data-category="Phones" data-brand="Samsung" data-price="65000">
+                        <img src="./img/samsung-z.jpg" alt="Samsung Z Series"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">Samsung Z Series</h2>
+                        <p class="mt-1">₹65,000</p>
+                    </div>
+
+
+                    <!-- ONEPLUS -->
+
+                    <div class="product-card" data-category="Phones" data-brand="OnePlus" data-price="55000">
+                        <img src="./img/op13.jpg" alt="OnePlus 13"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">OnePlus 13</h2>
+                        <p class="mt-1">₹55,000</p>
+                    </div>
+
+                    <div class="product-card" data-category="Phones" data-brand="OnePlus" data-price="45000">
+                        <img src="./img/op13r.jpg" alt="OnePlus 13R"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">OnePlus 13R</h2>
+                        <p class="mt-1">₹45,000</p>
+                    </div>
+
+                    <div class="product-card" data-category="Phones" data-brand="OnePlus" data-price="40000">
+                        <img src="./img/op-11.jpg" alt="OnePlus 11"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">OnePlus 11</h2>
+                        <p class="mt-1">₹40,000</p>
+                    </div>
+
+                    <div class="product-card" data-category="Phones" data-brand="OnePlus" data-price="50000">
+                        <img src="./img/op-10pro.jpg" alt="OnePlus 10 Pro"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">OnePlus 10 Pro</h2>
+                        <p class="mt-1">₹50,000</p>
+                    </div>
+
+                    <div class="product-card" data-category="Phones" data-brand="OnePlus" data-price="30000">
+                        <img src="./img/op-nord5.jpg" alt="OnePlus Nord 5"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">OnePlus Nord 5</h2>
+                        <p class="mt-1">₹30,000</p>
+                    </div>
+
+                    <div class="product-card" data-category="Phones" data-brand="OnePlus" data-price="25000">
+                        <img src="./img/op-nordce5.jpg" alt="OnePlus Nord CE5"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">OnePlus Nord CE5</h2>
+                        <p class="mt-1">₹25,000</p>
+                    </div>
+
+
+                    <!-- HEADPHONES -->
+
+                    <div class="product-card" data-category="Headphones" data-brand="Apple" data-price="25000">
+                        <img src="./img/apple-headset.jpg" alt="Apple Headphones"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">Apple Headphones</h2>
+                        <p class="mt-1">₹25,000</p>
+                    </div>
+
+                    <div class="product-card" data-category="Headphones" data-brand="Sony" data-price="12000">
+                        <img src="./img/sony-headset.jpg" alt="Sony Headphones"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">Sony Headphones</h2>
+                        <p class="mt-1">₹12,000</p>
+                    </div>
+
+                    <div class="product-card" data-category="Headphones" data-brand="Boat" data-price="2500">
+                        <img src="./img/boat-headset.jpg" alt="Boat Headphones"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">boAt Headphones</h2>
+                        <p class="mt-1">₹2,500</p>
+                    </div>
+
+                    <div class="product-card" data-category="Headphones" data-brand="" data-price="3500">
+                        <img src="./img/lazer-headset.jpg" alt="Gaming Headphones"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">Gaming Headphones</h2>
+                        <p class="mt-1">₹3,500</p>
+                    </div>
+
+
+                    <!-- WATCHES -->
+
+                    <div class="product-card" data-category="Watches" data-brand="Apple" data-price="30000">
+                        <img src="./img/apple-watch.jpg" alt="Apple Watch"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">Apple Watch</h2>
+                        <p class="mt-1">₹30,000</p>
+                    </div>
+
+                    <div class="product-card" data-category="Watches" data-brand="Samsung" data-price="18000">
+                        <img src="./img/galaxy-watch.jpg" alt="Galaxy Watch"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">Galaxy Watch</h2>
+                        <p class="mt-1">₹18,000</p>
+                    </div>
+
+
+                    <!-- EARBUDS -->
+
+                    <div class="product-card" data-category="Earbuds" data-brand="Samsung" data-price="5000">
+                        <img src="./img/galaxy-buds-on.jpg" alt="Galaxy Buds"
+                            class="w-full aspect-square object-contain bg-gray-100">
+                        <h2 class="font-bold text-xl md:text-2xl mt-3">Galaxy Buds</h2>
+                        <p class="mt-1">₹5,000</p>
+                    </div>
+
+
+                </div>
+
+
+                <!-- No Products -->
+                <p id="noProducts" class="hidden text-center text-xl font-bold mt-10">
+                    No products found!
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-black text-white mt-10 px-6 py-10">
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+            <div>
+
+                <h1 class="text-4xl font-bold text-red-500" style="font-family: 'Alfa Slab One', serif;">
+                    NOSTRA
+                </h1>
+
+                <p class="text-gray-400 mt-4 leading-7">
+                    Discover the latest trends in fashion, electronics
+                    and lifestyle. Shop your favorite products at
+                    the best prices.
+                </p>
+
+                <div class="flex gap-4 mt-5">
+                    <a href="#" class="hover:text-red-500">Instagram</a>
+                    <a href="#" class="hover:text-red-500">Facebook</a>
+                    <a href="#" class="hover:text-red-500">YouTube</a>
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <h2 class="font-bold text-xl mb-5">Quick Links</h2>
+
+                <ul class="space-y-3 text-gray-400">
+                    <li><a href="index.html" class="hover:text-white">Home</a></li>
+                    <li><a href="#" class="hover:text-white">New Arrivals</a></li>
+                    <li><a href="#" class="hover:text-white">Most Wanted</a></li>
+                    <li><a href="#" class="hover:text-white">About Us</a></li>
+                    <li><a href="#" class="hover:text-white">Contact</a></li>
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h2 class="font-bold text-xl mb-5">Categories</h2>
+
+                <ul class="space-y-3 text-gray-400">
+                    <li><a href="#" class="hover:text-white">Mobiles</a></li>
+                    <li><a href="#" class="hover:text-white">Fashion</a></li>
+                    <li><a href="#" class="hover:text-white">Electronics</a></li>
+                    <li><a href="#" class="hover:text-white">Toys</a></li>
+                    <li><a href="#" class="hover:text-white">Sports</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+
+            <p class="text-gray-400 text-sm text-center">
+                © 2026 NOSTRA. All Rights Reserved.
+            </p>
+
+            <div class="flex gap-5 text-sm text-gray-400">
+                <a href="#" class="hover:text-white">Privacy Policy</a>
+                <a href="#" class="hover:text-white">Terms & Conditions</a>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="collections.js"></script>
+
+</body>
+
+</html>
